@@ -1,14 +1,14 @@
 const converter = require('./converter.js')
 
-test('return $0.00 when input is 0', () => {
-    expect(converter(0)).toEqual('$0.00');
+test('input is 0', () => {
+    expect(converter(0)).toEqual('$0');
 });
-test('return $330.58 when input is 100', () => {
-    expect(converter(100)).toEqual('$330.58');
+test('input is 50', () => {
+    expect(converter(50)).toEqual('$1.66');
 });
-test('return $-330.58 when input is -100', () => {
-    expect(converter(-100)).toEqual('$-330.58');
+test('input is 100', () => {
+    expect(converter(100)).toEqual('$3.31');
 });
-test('return error when input is hey', () => {
-    expect(converter('hey')).toEqual('error');
+test('welcome to Thailand', () => {
+    expect(converter('welcome to Thailand')).toEqual('error');
 });
